@@ -88,7 +88,7 @@
 <meta property="og:description" content="根據中央研究院人社中心地理資訊研究專題中心所發佈資訊(EPSG:3828錯誤修正)指出QGIS軟體是利用Proj.4（地圖投影函式庫）來進行坐標系統轉換參考，然而目前 Proj.4 492版中對於EPSG:3828（即TM2 TWD67，中央經線121度）的定義不夠完整， 因此會造成TM2 TWD 67 &amp;lt;-&amp;gt; TWD97坐標轉換會產生問題。目前仍有部分政府機關 （例如：地政事務所、林">
 <meta property="og:locale" content="zh-tw">
 <meta property="og:image" content="https://jc7qx.github.io/2019/11/21/TWD674Qgis/fig.png">
-<meta property="og:updated_time" content="2019-11-21T02:15:10.023Z">
+<meta property="og:updated_time" content="2019-11-21T04:32:07.778Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="QGIS中使用TWD67時需要修正">
 <meta name="twitter:description" content="根據中央研究院人社中心地理資訊研究專題中心所發佈資訊(EPSG:3828錯誤修正)指出QGIS軟體是利用Proj.4（地圖投影函式庫）來進行坐標系統轉換參考，然而目前 Proj.4 492版中對於EPSG:3828（即TM2 TWD67，中央經線121度）的定義不夠完整， 因此會造成TM2 TWD 67 &amp;lt;-&amp;gt; TWD97坐標轉換會產生問題。目前仍有部分政府機關 （例如：地政事務所、林">
@@ -351,8 +351,7 @@
 <li>參數欄輸入 “+proj=tmerc +lat_0=0 +lon_0=121 +k=0.9999 +x_0=250000 +y_0=0 +ellps=aust_SA +towgs84=-752 -358,-179,-0.0000011698,0.0000018398,0.0000009822,0.00002329 +units=m +no_defs” 拷貝上述參數至參數欄</li>
 </ol>
 <p>完成修正</p>
-<p><img src="fig.png" alt="user define CRS">]</p>
-
+<img src="/2019/11/21/TWD674Qgis/fig.png" title="[fig]">
       
     </div>
     
