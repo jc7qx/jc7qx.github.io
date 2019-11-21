@@ -93,7 +93,7 @@
 <meta property="og:image" content="https://jc7qx.github.io/2019/11/21/createHeatmap/fig4.png">
 <meta property="og:image" content="https://jc7qx.github.io/2019/11/21/createHeatmap/fig5.png">
 <meta property="og:image" content="https://jc7qx.github.io/2019/11/21/createHeatmap/fig6.png">
-<meta property="og:updated_time" content="2019-11-21T03:47:33.446Z">
+<meta property="og:updated_time" content="2019-11-21T03:50:20.363Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="QGIS建立熱區圖">
 <meta name="twitter:description" content="熱區圖(Heatmap)是空間分析研究中重要工具，運用在犯罪研究中可以幫助決策者了解城市犯罪熱點的分佈，以利警力佈署及資源運用。在QGIS中熱區圖的建立通常利用Kernel Density Estimation方法對空間目標點位進行運算以產生所需要的熱區圖。QGIS的地理算工具提供Heatmap製作。啟動Heatmap運作，先由功能列點選地理運算，在地理運算工具列搜尋Heatmap，在搜尋結果列表">
@@ -348,6 +348,8 @@
 
       
         <p>熱區圖(Heatmap)是空間分析研究中重要工具，運用在犯罪研究中可以幫助決策者了解城市犯罪熱點的分佈，以利警力佈署及資源運用。在QGIS中熱區圖的建立通常利用Kernel Density Estimation方法對空間目標點位進行運算以產生所需要的熱區圖。QGIS的地理算工具提供Heatmap製作。啟動Heatmap運作，先由功能列點選<strong>地理運算</strong>，在地理運算工具列搜尋<strong>Heatmap</strong>，在搜尋結果列表中點選「<strong>Heatmap (Kernel Density Estimation</strong>)」，系統回應一個操作選單介面，其中基本需要填寫的參數項目標包含<strong>點位圖層</strong>(Point layer)及<strong>半徑</strong>欄位，須注意半徑的<strong>單位</strong>，如公尺。另適當地填入列、行、像素大小X，Y參數，這些參數將影響輸出圖形檔的大小。進階參數部分在此先暫不討論。產生出的熱區圖還需要對輸出顯示選擇適當的色彩進行調整。</p>
+<a id="more"></a>
+
 <p>先來實際操作體驗一下，這裡我們使用的點位資料為之前台北市小七便利商店的位置所產生的kml檔。</p>
 <p>操作步驟</p>
 <ol>
