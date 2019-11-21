@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="QGIS, CRS,">
 
 
 
@@ -79,13 +79,20 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="健雄筆記">
-<meta property="og:url" content="https://jc7qx.github.io/tags/QGIS-Google-Earth/index.html">
+<meta name="description" content="根據中央研究院人社中心地理資訊研究專題中心所發佈資訊(EPSG:3828錯誤修正)指出QGIS軟體是利用Proj.4（地圖投影函式庫）來進行坐標系統轉換參考，然而目前 Proj.4 492版中對於EPSG:3828（即TM2 TWD67，中央經線121度）的定義不夠完整， 因此會造成TM2 TWD 67 &amp;lt;-&amp;gt; TWD97坐標轉換會產生問題。目前仍有部分政府機關 （例如：地政事務所、林">
+<meta name="keywords" content="QGIS, CRS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="QGIS中使用TWD67時需要修正">
+<meta property="og:url" content="https://jc7qx.github.io/2019/11/21/TWD674Qgis/index.html">
 <meta property="og:site_name" content="健雄筆記">
+<meta property="og:description" content="根據中央研究院人社中心地理資訊研究專題中心所發佈資訊(EPSG:3828錯誤修正)指出QGIS軟體是利用Proj.4（地圖投影函式庫）來進行坐標系統轉換參考，然而目前 Proj.4 492版中對於EPSG:3828（即TM2 TWD67，中央經線121度）的定義不夠完整， 因此會造成TM2 TWD 67 &amp;lt;-&amp;gt; TWD97坐標轉換會產生問題。目前仍有部分政府機關 （例如：地政事務所、林">
 <meta property="og:locale" content="zh-tw">
+<meta property="og:image" content="https://jc7qx.github.io/2019/11/21/TWD674Qgis/fig.png">
+<meta property="og:updated_time" content="2019-11-21T02:15:10.023Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="健雄筆記">
+<meta name="twitter:title" content="QGIS中使用TWD67時需要修正">
+<meta name="twitter:description" content="根據中央研究院人社中心地理資訊研究專題中心所發佈資訊(EPSG:3828錯誤修正)指出QGIS軟體是利用Proj.4（地圖投影函式庫）來進行坐標系統轉換參考，然而目前 Proj.4 492版中對於EPSG:3828（即TM2 TWD67，中央經線121度）的定義不夠完整， 因此會造成TM2 TWD 67 &amp;lt;-&amp;gt; TWD97坐標轉換會產生問題。目前仍有部分政府機關 （例如：地政事務所、林">
+<meta name="twitter:image" content="https://jc7qx.github.io/2019/11/21/TWD674Qgis/fig.png">
 
 
 
@@ -115,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="https://jc7qx.github.io/tags/QGIS-Google-Earth/">
+  <link rel="canonical" href="https://jc7qx.github.io/2019/11/21/TWD674Qgis/">
 
 
 
 
 
-  <title>標籤: QGIS, Google Earth | 健雄筆記</title>
+  <title>QGIS中使用TWD67時需要修正 | 健雄筆記</title>
   
 
 
@@ -140,7 +147,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -244,52 +251,170 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>QGIS, Google Earth<small>標籤</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://jc7qx.github.io/2019/11/21/TWD674Qgis/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="鍾健雄(Jainshone Chung)">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="健雄筆記">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2019/11/20/locatingInGooglEarth/" itemprop="url">
-              
-                <span itemprop="name">利用Google Earth將中文地址轉換成經緯度座標</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">QGIS中使用TWD67時需要修正</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-11-20T20:35:22+08:00" content="2019-11-20">
-          11-20
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">發表於</span>
+              
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2019-11-21T09:54:59+08:00">
+                2019-11-21
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/11/21/TWD674Qgis/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/11/21/TWD674Qgis/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>根據中央研究院人社中心地理資訊研究專題中心所發佈資訊(<a href="http://gis.rchss.sinica.edu.tw/qgis/?p=3542" target="_blank" rel="noopener">EPSG:3828錯誤修正</a>)指出QGIS軟體是利用Proj.4（地圖投影函式庫）來進行坐標系統轉換參考，然而目前 Proj.4 492版中對於EPSG:3828（即TM2 TWD67，中央經線121度）的定義不夠完整， 因此會造成TM2 TWD 67 &lt;-&gt; TWD97坐標轉換會產生問題。目前仍有部分政府機關 （例如：地政事務所、林務局等單位）在提供資料時仍會提供TM2 TWD 67坐標系統 的GIS圖層，因此這個問題仍然困擾很多人。</p>
+<p>在QGIS 3.4中使用TWD67時需要修正，修正步驟如下</p>
+<ol>
+<li>入設定功能中客製投影(Custom Projections)</li>
+<li>新增座標參考系統(+)</li>
+<li>名稱欄輸入TWD67</li>
+<li>參數欄輸入 “+proj=tmerc +lat_0=0 +lon_0=121 +k=0.9999 +x_0=250000 +y_0=0 +ellps=aust_SA +towgs84=-752 -358,-179,-0.0000011698,0.0000018398,0.0000009822,0.00002329 +units=m +no_defs” 拷貝上述參數至參數欄</li>
+</ol>
+<p>完成修正</p>
+<p><img src="fig.png" alt="user define CRS">]</p>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/QGIS-CRS/" rel="tag"># QGIS, CRS</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/11/20/locatingInGooglEarth/" rel="next" title="利用Google Earth將中文地址轉換成經緯度座標">
+                <i class="fa fa-chevron-left"></i> 利用Google Earth將中文地址轉換成經緯度座標
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/11/21/createHeatmap/" rel="prev" title="QGIS建立熱區圖">
+                QGIS建立熱區圖 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -297,6 +422,20 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -509,6 +648,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -526,6 +669,18 @@
       <script id="dsq-count-scr" src="https://jc7qx-blog.disqus.com/count.js" async></script>
     
 
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'https://jc7qx.github.io/2019/11/21/TWD674Qgis/';
+          this.page.identifier = '2019/11/21/TWD674Qgis/';
+          this.page.title = 'QGIS中使用TWD67時需要修正';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://jc7qx-blog.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
     
 
   

@@ -259,6 +259,307 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://jc7qx.github.io/2019/11/21/createHeatmap/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="鍾健雄(Jainshone Chung)">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="健雄筆記">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/11/21/createHeatmap/" itemprop="url">QGIS建立熱區圖</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">發表於</span>
+              
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2019-11-21T10:24:46+08:00">
+                2019-11-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/11/21/createHeatmap/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/11/21/createHeatmap/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>熱區圖(Heatmap)是空間分析研究中重要工具，運用在犯罪研究中可以幫助決策者了解城市犯罪熱點的分佈，以利警力佈署及資源運用。在QGIS中熱區圖的建立通常利用Kernel Density Estimation方法對空間目標點位進行運算以產生所需要的熱區圖。QGIS的地理算工具提供Heatmap製作。啟動Heatmap運作，先由功能列點選<strong>地理運算</strong>，在地理運算工具列搜尋<strong>Heatmap</strong>，在搜尋結果列表中點選「<strong>Heatmap (Kernel Density Estimation</strong>)」，系統回應一個操作選單介面，其中基本需要填寫的參數項目標包含<strong>點位圖層</strong>(Point layer)及<strong>半徑</strong>欄位，須注意半徑的<strong>單位</strong>，如公尺。另適當地填入列、行、像素大小X，Y參數，這些參數將影響輸出圖形檔的大小。進階參數部分在此先暫不討論。產生出的熱區圖還需要對輸出顯示選擇適當的色彩進行調整。</p>
+<p>先來實際操作體驗一下，這裡我們使用的點位資料為之前台北市小七便利商店的位置所產生的kml檔。</p>
+<p>操作步驟</p>
+<ol>
+<li><p>開啟QGIS，載入台北市的村里界圖做為底圖，調整適當顯示顏色。</p>
+</li>
+<li><p>載入711門市.kml檔案，調整適當顯示顏色。</p>
+<blockquote>
+<p><strong>注意</strong>：將調整好的圖層另層成shapefile，並選擇座標系統為TWD97/121，中文編碼為utf-8。</p>
+</blockquote>
+<p><img src="fig1.png" alt="fig1"></p>
+</li>
+<li><p>功能列點選「地理運算」下的「工具箱」，在地理運算工具列搜尋「Heatmap」，在搜尋結果列表中點選「Heatmap (Kernel Density Estimation」</p>
+<p> <img src="fig3.png" alt="fig3"></p>
+</li>
+<li><p>在熱區圖參數界面中輸入參數</p>
+<blockquote>
+<p>Point layer： 點選小七位址的點位圖層<br><br>半徑：500.00 單位：公尺<br><br>列：2000 (行參數會自行調整)</p>
+</blockquote>
+<p> <img src="fig2.png" alt="fig2"></p>
+</li>
+<li><p>運行計算完成產生Heapmap網格圖檔。</p>
+<p> <img src="fig4.png" alt="fig4"></p>
+</li>
+<li><p>調整Heatmap輸出顯示。</p>
+<blockquote>
+<p>開啟Heatmap屬性設定<br><br>選擇「符號學」<br><br>繪圖類型：Paletted/Unique values<br><br>色彩映射表：Spectral<br></p>
+</blockquote>
+<p> <img src="fig5.png" alt="fig5"></p>
+</li>
+</ol>
+<p>完成台北市小七便利商店位置的熱區圖</p>
+<p><img src="fig6.png" alt="fig6"></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://jc7qx.github.io/2019/11/21/TWD674Qgis/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="鍾健雄(Jainshone Chung)">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="健雄筆記">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/11/21/TWD674Qgis/" itemprop="url">QGIS中使用TWD67時需要修正</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">發表於</span>
+              
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2019-11-21T09:54:59+08:00">
+                2019-11-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/11/21/TWD674Qgis/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/11/21/TWD674Qgis/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>根據中央研究院人社中心地理資訊研究專題中心所發佈資訊(<a href="http://gis.rchss.sinica.edu.tw/qgis/?p=3542" target="_blank" rel="noopener">EPSG:3828錯誤修正</a>)指出QGIS軟體是利用Proj.4（地圖投影函式庫）來進行坐標系統轉換參考，然而目前 Proj.4 492版中對於EPSG:3828（即TM2 TWD67，中央經線121度）的定義不夠完整， 因此會造成TM2 TWD 67 &lt;-&gt; TWD97坐標轉換會產生問題。目前仍有部分政府機關 （例如：地政事務所、林務局等單位）在提供資料時仍會提供TM2 TWD 67坐標系統 的GIS圖層，因此這個問題仍然困擾很多人。</p>
+<p>在QGIS 3.4中使用TWD67時需要修正，修正步驟如下</p>
+<ol>
+<li>入設定功能中客製投影(Custom Projections)</li>
+<li>新增座標參考系統(+)</li>
+<li>名稱欄輸入TWD67</li>
+<li>參數欄輸入 “+proj=tmerc +lat_0=0 +lon_0=121 +k=0.9999 +x_0=250000 +y_0=0 +ellps=aust_SA +towgs84=-752 -358,-179,-0.0000011698,0.0000018398,0.0000009822,0.00002329 +units=m +no_defs” 拷貝上述參數至參數欄</li>
+</ol>
+<p>完成修正</p>
+<p><img src="fig.png" alt="user define CRS">]</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://jc7qx.github.io/2019/11/20/locatingInGooglEarth/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -426,7 +727,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">文章</span>
                 </a>
               </div>
@@ -439,7 +740,7 @@
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">標籤</span>
                 
               </div>
